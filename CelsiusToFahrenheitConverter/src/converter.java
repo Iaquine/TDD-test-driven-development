@@ -1,5 +1,5 @@
 
-public class conversor {
+public class converter {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

@@ -14,19 +14,19 @@ class ConverterTest {
 	public void getConvertedTemperature() {
 		double convertedTemp = 0;
 		
-		convertedTemp = con.converTemp(32);
+		convertedTemp = con.fahrenheitToCelsius(32.0);
 		assertEquals(0,convertedTemp);
 		
-		convertedTemp = con.converTemp(50);
-		assertEquals(10,convertedTemp);
+		convertedTemp = con.fahrenheitToCelsius(50.0);
+		assertEquals(10.0,convertedTemp);
 		
-		convertedTemp = con.converTemp(212);
-		assertEquals(100,convertedTemp);
+		convertedTemp = con.fahrenheitToCelsius(212.0);
+		assertEquals(100.0,convertedTemp);
 		
-		convertedTemp = con.converTemp(-40);
-		assertEquals(-40,convertedTemp);
+		convertedTemp = con.fahrenheitToCelsius(-40.0);
+		assertEquals(-40.0,convertedTemp);
 		
-		convertedTemp = con.converTemp(-459.67);
+		convertedTemp = con.fahrenheitToCelsius(-459.67);
 		assertEquals(-273.15,convertedTemp);
 	}
 

@@ -6,4 +6,9 @@ public class Converter {
 
 	}
 
+	public double fahrenheitToCelsius(double fahrenheit) {
+		return ((fahrenheit-32)*5/9);
+			
+	}
+
 }

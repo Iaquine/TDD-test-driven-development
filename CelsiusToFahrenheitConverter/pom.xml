@@ -3,7 +3,6 @@
   <groupId>CelsiusToFahrenheitConverter</groupId>
   <artifactId>CelsiusToFahrenheitConverter</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <url>http://maven.apache.org</url>
   <dependencies>
 		<dependency>
 	    	<groupId>org.mockito</groupId>

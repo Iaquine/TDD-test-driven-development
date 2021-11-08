@@ -6,4 +6,13 @@ public class Palindrome {
 
 	}
 
+	public boolean isPalindrome(String string) {
+		
+		boolean Palindrome = true;  
+		
+		return Palindrome;
+	}
+
+
+
 }

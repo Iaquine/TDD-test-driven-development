@@ -21,8 +21,12 @@ class StackTest {
 		void startsEmpty() {
 			assertEquals(stack.isEmpty(),true);
 		}
-	
-	
+		@Test
+		@DisplayName("starts with stack size of 0")
+		void startsWithstackSizeof0() {
+			assertEquals(stack.size(), 0);
+		}
+		
 	
 	
 	

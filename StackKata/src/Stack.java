@@ -10,4 +10,15 @@ public class Stack {
 		return true;
 	}
 
+	public Object size() {
+		
+		boolean isEmpty = (boolean) isEmpty();
+		
+		if (isEmpty == true) {
+			int size = 0;
+			return size;
+		}
+		return null;
+	}
+
 }

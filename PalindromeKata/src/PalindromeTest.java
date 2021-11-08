@@ -1,6 +1,5 @@
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -47,7 +46,7 @@ class PalindromeTest {
 		@DisplayName("error for empty string")
 		void errorForemptyString() {
 			
-			NullPointerException exception = assertThrows(NullPointerException.class, 
+			IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, 
 					() -> {pan.isPalindrome("");
 						});
 	    assertEquals("Empty string are not allowed", exception.getMessage());
@@ -56,9 +55,8 @@ class PalindromeTest {
 		@Test
 		@DisplayName("error for not a string")
 		void errorFornotString() {
-			IllegalArgumentException thrown = Assertions
-					.assertThrows(IllegalArgumentException.class, 
-							() -> {pan.isPalindrome("");
+			IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, 
+							() -> {pan.isPalindrome(9);
 							});		
 		
 			assertEquals("Only strings are allowed", thrown.getMessage());

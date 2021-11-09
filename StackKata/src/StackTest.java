@@ -84,6 +84,15 @@ class StackTest {
 		}
 	
 		
+		@Test
+		@DisplayName("pops two items with the most recent first")
+		void popsTwoitemsWiththeMostrecentFirst() {
+			stack.push("1");
+			stack.push("2");
+			assertEquals("2", stack.pop());
+			assertEquals("1", stack.pop());
+		}
+		
 		
 		
 	}

@@ -22,7 +22,7 @@ public class Stack {
 		if (size == 2) {
 			throw new IllegalArgumentException("capacity overflow error");
 		}
-		element[0] = item;
+		element[size] = item;
 		size += 1;
 	   
 	}

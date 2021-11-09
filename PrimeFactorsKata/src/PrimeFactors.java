@@ -1,9 +1,15 @@
 
+
 public class PrimeFactors {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	int [] factors;
 
+
+	public Object findPrimeFactors(int i) {
+		// TODO Auto-generated method stub
+		return factors;
 	}
+
+
 
 }

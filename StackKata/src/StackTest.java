@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 class StackTest {
 
-	Stack stack = new Stack();  
+	Stack stack = new Stack(2);  
 	
 	
 	@Nested
@@ -91,6 +91,16 @@ class StackTest {
 			stack.push("2");
 			assertEquals("2", stack.pop());
 			assertEquals("1", stack.pop());
+		}
+		
+		@Test
+		@DisplayName("accepts only a positive capacity")
+		void acceptsOnlyaPositiveCapacity() {
+			IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, 
+					() -> {new Stack(-1); 
+					});		
+                   assertEquals("invalid capacity", thrown.getMessage());
+			
 		}
 		
 		

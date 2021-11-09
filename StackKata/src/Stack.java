@@ -1,14 +1,25 @@
 
 public class Stack {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
+	
+	
 	
 	int size = 0;
+	int capacity = 0;
 	String [] element = new String[2];
 	
+	
+	public Stack(int capacity) {
+		
+		if (capacity < 1) {
+			throw new IllegalArgumentException("invalid capacity");
+		}
+		
+		this.capacity = capacity;
+		
+		
+	}
+
 	public Object isEmpty() {
 		return size == 0;
 	}

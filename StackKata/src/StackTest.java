@@ -27,7 +27,15 @@ class StackTest {
 			assertEquals(stack.size(), 0);
 		}
 		
-	
+		@Test
+		@DisplayName("is not empty when pushed")
+		void isNotemptyWhenpushed() {
+		
+			int item = 0;
+			assertEquals(stack.push(item), false);
+		}
+		
+		
 	
 	
 	

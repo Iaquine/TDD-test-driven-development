@@ -18,7 +18,16 @@ public class Stack {
 			int size = 0;
 			return size;
 		}
-		return null;
+		return false;
+	}
+
+	public Object push(int item) {
+		int size =+ 1;
+		boolean empty = (boolean) isEmpty();
+		empty = false;
+		
+		return empty;	
+	  
 	}
 
 }

@@ -7,6 +7,7 @@ public class Stack {
 	}
 	
 	int size = 0;
+	String [] element = new String[2];
 	
 	public Object isEmpty() {
 		return size == 0;
@@ -16,22 +17,24 @@ public class Stack {
 		return size;
 	}
 	
-	public void push() {
+	public void push(String item) {
 		
 		if (size == 2) {
 			throw new IllegalArgumentException("capacity overflow error");
 		}
+		element[0] = item;
 		size += 1;
 	   
 	}
 	
-	public void pop() { 
+	public String pop() { 
 		
 		if (size == 0) {
 			throw new IllegalArgumentException("capacity underflow error");
 		}
 		
 		size -= 1;
+		return element[size];
 	}
 	
 	

@@ -27,21 +27,21 @@ class StackTest {
 		@Test
 		@DisplayName("is not empty when pushed")
 		void isNotemptyWhenpushed() {
-		   stack.push();
+		   stack.push(" ");
 		   assertEquals(false, stack.isEmpty());
 		}
 		
 		@Test
 		@DisplayName("stack size is 1 when pushed'")
 		void stackSizeis1Whenpushed() {
-			stack.push();
+			stack.push(" ");
 			assertEquals(1, stack.size());
 		}
 		
 		@Test
 		@DisplayName("stack is empty when pushed and popped")
 		void stackIsemptyWhenpushedAndpopped() {
-			stack.push();
+			stack.push(" ");
 			stack.pop();
 			assertEquals(true, stack.isEmpty());
 		}
@@ -49,7 +49,7 @@ class StackTest {
 		@Test
 		@DisplayName("stack size is 0 when pushed and popped")
 		void stackSizeis0WhenpushedAndpopped() {
-			stack.push();
+			stack.push(" ");
 			stack.pop();
 			assertEquals(0, stack.size());
 		}
@@ -58,9 +58,9 @@ class StackTest {
 		@DisplayName("throws overflow error when pushing to a stack at full capacity")
 		void throwsOverflowerrorWhenpushStackfullCapacity() {
 			IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, 
-					() -> {	stack.push();
-							stack.push();
-							stack.push();
+					() -> {	stack.push(" ");
+							stack.push(" ");
+							stack.push(" ");
 					});		
                    assertEquals("capacity overflow error", thrown.getMessage());
 			
@@ -75,6 +75,15 @@ class StackTest {
                    assertEquals("capacity underflow error", thrown.getMessage());
 			
 		}
+		
+		@Test
+		@DisplayName("pops the same one item when pushed")
+		void popsThesameOneitemWhenpushed() {
+			stack.push("a");
+			assertEquals("a", stack.pop());
+		}
+	
+		
 		
 		
 	}

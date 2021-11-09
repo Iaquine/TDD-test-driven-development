@@ -7,30 +7,32 @@ public class Stack {
 	}
 	
 	int size = 0;
-	boolean empty = true;
 	
 	public Object isEmpty() {
-		return empty;
+		return size == 0;
 	}
-
-
+	
 	public Object size() {
-		
-		if (empty == true) {
-			return size = 0;
-		}
 		return size;
 	}
 	
-	public Object push() {
-		size =+1;
-		return empty = false;
-	  
-	}
-
-	public void pop() {
+	public void push() {
 		
-		empty = true;	 
-		size =- 1;
+		if (size == 2) {
+			throw new IllegalArgumentException("capacity overflow error");
+		}
+		size += 1;
+	   
 	}
+	
+	public void pop() { 
+		
+		if (size == 0) {
+			throw new IllegalArgumentException("capacity underflow error");
+		}
+		
+		size -= 1;
+	}
+	
+	
 }

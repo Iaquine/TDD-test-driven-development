@@ -1,8 +1,5 @@
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.BeforeAll;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -30,7 +27,8 @@ class StackTest {
 		@Test
 		@DisplayName("is not empty when pushed")
 		void isNotemptyWhenpushed() {
-			assertEquals(false, stack.push());
+		   stack.push();
+		   assertEquals(false, stack.isEmpty());
 		}
 		
 		@Test
@@ -56,7 +54,29 @@ class StackTest {
 			assertEquals(0, stack.size());
 		}
 	
-	
+		@Test
+		@DisplayName("throws overflow error when pushing to a stack at full capacity")
+		void throwsOverflowerrorWhenpushStackfullCapacity() {
+			IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, 
+					() -> {	stack.push();
+							stack.push();
+							stack.push();
+					});		
+                   assertEquals("capacity overflow error", thrown.getMessage());
+			
+		}
+		
+		@Test
+		@DisplayName("throw underflow error when popping an empty stack")
+		void throwUnderflowerrorWhenpoppingEmptystack() {
+			IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, 
+					() -> {	stack.pop();
+					});		
+                   assertEquals("capacity underflow error", thrown.getMessage());
+			
+		}
+		
+		
 	}
 
 }

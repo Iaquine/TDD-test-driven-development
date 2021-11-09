@@ -19,22 +19,27 @@ class StackTest {
 		@Test
 		@DisplayName("starts empty")
 		void startsEmpty() {
-			assertEquals(stack.isEmpty(),true);
+			assertEquals(true, stack.isEmpty());
 		}
 		@Test
 		@DisplayName("starts with stack size of 0")
 		void startsWithstackSizeof0() {
-			assertEquals(stack.size(), 0);
+			assertEquals(0, stack.size());
 		}
 		
 		@Test
 		@DisplayName("is not empty when pushed")
 		void isNotemptyWhenpushed() {
-		
 			int item = 0;
-			assertEquals(stack.push(item), false);
+			assertEquals(false, stack.push(item));
 		}
 		
+		@Test
+		@DisplayName("stack size is 1 when pushed'")
+		void stackSizeis1Whenpushed() {
+			stack.push(0);
+			assertEquals(1, stack.size());
+		}
 		
 	
 	

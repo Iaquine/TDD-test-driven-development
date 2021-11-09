@@ -5,29 +5,26 @@ public class Stack {
 		// TODO Auto-generated method stub
 
 	}
-
+	
+	int size = 0;
+	boolean empty = true;
+	
 	public Object isEmpty() {
-		return true;
+		return empty;
 	}
+
 
 	public Object size() {
 		
-		boolean isEmpty = (boolean) isEmpty();
-		
-		if (isEmpty == true) {
-			int size = 0;
-			return size;
+		if (empty == true) {
+			return size = 0;
 		}
-		return false;
+		return size;
 	}
-
+	
 	public Object push(int item) {
-		int size =+ 1;
-		boolean empty = (boolean) isEmpty();
-		empty = false;
-		
-		return empty;	
+		size =+1;
+		return empty = false;
 	  
 	}
-
 }

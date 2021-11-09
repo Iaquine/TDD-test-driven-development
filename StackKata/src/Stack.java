@@ -28,7 +28,9 @@ public class Stack {
 	  
 	}
 
-	public Object pop() {
-		return empty = true;		
+	public void pop() {
+		
+		empty = true;	 
+		size =- 1;
 	}
 }

@@ -47,7 +47,14 @@ class StackTest {
 			stack.pop();
 			assertEquals(true, stack.isEmpty());
 		}
-	
+		
+		@Test
+		@DisplayName("stack size is 0 when pushed and popped")
+		void stackSizeis0WhenpushedAndpopped() {
+			stack.push();
+			stack.pop();
+			assertEquals(0, stack.size());
+		}
 	
 	
 	}

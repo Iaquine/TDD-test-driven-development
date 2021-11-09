@@ -22,9 +22,13 @@ public class Stack {
 		return size;
 	}
 	
-	public Object push(int item) {
+	public Object push() {
 		size =+1;
 		return empty = false;
 	  
+	}
+
+	public Object pop() {
+		return empty = true;		
 	}
 }

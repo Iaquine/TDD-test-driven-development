@@ -2,11 +2,11 @@
 
 public class PrimeFactors {
 
-	int [] factors;
+	int [] factors =  new int[0];
 
 
 	public Object findPrimeFactors(int i) {
-		// TODO Auto-generated method stub
+		//if (i == 1) return null;
 		return factors;
 	}
 

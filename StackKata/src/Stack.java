@@ -17,7 +17,6 @@ public class Stack {
 		
 		this.capacity = capacity;
 		
-		
 	}
 
 	public Object isEmpty() {

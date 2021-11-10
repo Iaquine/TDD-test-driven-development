@@ -1,16 +1,21 @@
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import static org.testng.Assert.assertEquals;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
 class PrimeFactorsTest {
 
 	PrimeFactors prime = new PrimeFactors();
+	int [] primeFactores = new int [0];
 	
-	@Test
-	@DisplayName("return none for 1")
-	void returnNoneFor1() {
-		assertEquals(null, prime.findPrimeFactors(1));
+	
+	@DataProvider (name = "data-provider")
+    public Object[][] dpMethod(){
+	 return new Object[][] {{new int [0]}};
+    }
+	
+	@Test (dataProvider = "data-provider")
+	public void returnNoneFor1 (Object val) {
+	  assertEquals(val, prime.findPrimeFactors(1));
 	}
 
 }

@@ -10,7 +10,7 @@ class PrimeFactorsTest {
 	
 	@DataProvider (name = "data-provider")
     public Object[][] dpMethod(){
-	 return new Object[][] {{new int [0], 1}, {2, 2}};
+	 return new Object[][] {{new int [0], 1}, {2, 2}, {3,3}};
     }
 	
 	@Test (dataProvider = "data-provider")

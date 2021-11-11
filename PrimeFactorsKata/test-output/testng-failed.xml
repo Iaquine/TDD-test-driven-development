@@ -5,7 +5,7 @@
     <classes>
       <class name="PrimeFactorsTest">
         <methods>
-          <include name="returnNoneFor1" invocation-numbers="2"/>
+          <include name="testcases" invocation-numbers="1 2 3"/>
         </methods>
       </class> <!-- PrimeFactorsTest -->
     </classes>
